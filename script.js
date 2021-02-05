@@ -31,10 +31,10 @@ function getUsers() {
 			data.forEach(function (user) {
 				output += `
 
-			                         <ul>
-			                             <li>Id: ${user.id}</li>
-			                             <li>Name: ${user.name}</li>
-			                             <li>Email: ${user.email}</li>
+ <ul class="list-group mb-3>
+  <li class="list-group-item">Id: ${user.id}</li>
+ <li class="list-group-item">Name: ${user.name}</li>
+ <li class="list-group-item mb-3">Email: ${user.email}</li>
 			                             </ul>
 
 			                         `;
@@ -42,18 +42,19 @@ function getUsers() {
 			document.getElementById('output').innerHTML = output;
 		});
 }
+
 function getPosts() {
 	// console.log(123);
 
 	fetch('http://jsonplaceholder.typicode.com/posts')
 		.then((res) => res.json())
 		.then((data) => {
-			let output = '<h2>Users</h2>';
+			let output = '<h2>Posts</h2>';
 
 			data.forEach(function (post) {
 				output += `
 
-			                         <div>
+			                         <div class="card-card-body mb-3>
 
 			                             <h3>${post.title} </h3>
 			                             <p>${post.body}</p>
