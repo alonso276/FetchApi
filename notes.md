@@ -1,1 +1,0 @@
-## fetch returns a promise
